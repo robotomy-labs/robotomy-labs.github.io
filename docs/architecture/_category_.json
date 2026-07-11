@@ -1,0 +1,9 @@
+{
+  "label": "Architecture",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/architecture",
+    "description": "Living reference docs for the G1 EDU technical stack. Edited in place as the system changes — not dated posts."
+  }
+}

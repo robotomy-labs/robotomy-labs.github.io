@@ -1,0 +1,44 @@
+jetpack:
+  label: JetPack
+  permalink: /jetpack
+  description: NVIDIA JetPack / L4T issues and upgrades.
+
+cuda:
+  label: CUDA
+  permalink: /cuda
+  description: CUDA toolkit, drivers, and compatibility.
+
+cyclonedds:
+  label: CycloneDDS
+  permalink: /cyclonedds
+  description: DDS middleware used for robot communication.
+
+docker:
+  label: Docker
+  permalink: /docker
+  description: Containerization on the Jetson/G1 EDU stack.
+
+audio:
+  label: Audio
+  permalink: /audio
+  description: Audio capture, playback, and processing.
+
+webrtc:
+  label: WebRTC
+  permalink: /webrtc
+  description: Real-time audio/video transport.
+
+firmware:
+  label: Firmware
+  permalink: /firmware
+  description: G1 EDU firmware and low-level control.
+
+pipecat:
+  label: Pipecat
+  permalink: /pipecat
+  description: Voice pipeline orchestration.
+
+security:
+  label: Security
+  permalink: /security
+  description: Access control, secrets, and hardening.

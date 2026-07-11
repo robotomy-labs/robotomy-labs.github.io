@@ -1,0 +1,9 @@
+{
+  "label": "Log",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log",
+    "description": "Pitfall-style entries from real G1 EDU development. Each entry follows: Symptom, Environment, Root Cause, Fix."
+  }
+}
