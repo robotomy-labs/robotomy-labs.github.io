@@ -16,7 +16,7 @@ This page is a reference, not a post. Edit it in place as the system changes —
 
 - **OS / L4T / JetPack:** JetPack 6.2 (L4T R36.4.3), Ubuntu 22.04.5, Python 3.10.12 (system) / 3.11.15 (production venv)
 - **CUDA:** 12.6, Driver 540.4.0
-- **DDS middleware:** CycloneDDS 0.10.2 (hard-pinned — see the [CycloneDDS version pinning log entry](/docs/log) for why this exact version matters)
+- **DDS middleware:** CycloneDDS 0.10.2 (hard-pinned — see the [CycloneDDS version pinning log entry](/docs/log/cyclonedds-version-pinning) for why this exact version matters)
 - **Containerization:** Docker 20.10.12 (pinned — newer versions break GPU passthrough on the tegra kernel)
 - **Voice pipeline:** Pipecat, orchestrating STT → LLM → TTS in a single Python 3.11 venv alongside the robot SDK
 - **Transport:** WebRTC for gesture dispatch and vendor-adjacent audio; DDS for direct robot-state and arm-command traffic
@@ -28,7 +28,7 @@ This page is a reference, not a post. Edit it in place as the system changes —
 | STT | faster-whisper large-v3, containerized FastAPI HTTP wrapper | Full-attention encoder — latency scales with utterance length regardless of model size (architectural, not a tuning problem) |
 | LLM | Ollama, GPU-confirmed | Runs isolated in a jetson-container over local HTTP, separate from the SDK/Pipecat venv |
 | TTS | espeak-ng (placeholder) → ElevenLabs Flash v2.5 (target) | ElevenLabs required for viseme data driving face-animation lip sync |
-| Gesture dispatch | Custom WebRTC client + DDS arm commands | Custom (taught) gestures require FSM-state gating — see the [FSM gating log entry](/docs/log) |
+| Gesture dispatch | Custom WebRTC client + DDS arm commands | Custom (taught) gestures require FSM-state gating — see the [FSM gating log entry](/docs/log/fsm-gating-custom-gestures) |
 | Safety | SAFE_IDLE — independent listener on the shared mic stream, force-interrupts the pipeline | Not routed through the main pipeline, by design |
 
 ## Deployment
