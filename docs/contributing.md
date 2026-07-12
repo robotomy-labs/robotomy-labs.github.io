@@ -1,10 +1,9 @@
 ---
-title: Writing a Log Entry
-sidebar_position: 1
-tags: [cuda]
+title: Contributing a Log Entry
+sidebar_position: 3
 ---
 
-This page documents the format for everything else in `docs/log/`. It isn't a real pitfall — it's the template. Delete this note once the format is familiar, or leave it as a reference for future entries.
+This page documents the format for everything in `docs/log/`. It isn't a pitfall entry itself — it's the template, kept out of the Log index so it doesn't show up alongside real entries.
 
 Every entry follows the same structure:
 
@@ -36,4 +35,4 @@ That renders as a small, dim, top-bordered line — visually distinct from the f
 
 ---
 
-Filename convention: `docs/log/short-kebab-case-title.md`. Tag entries with the relevant components from the tag list (`jetpack`, `cuda`, `cyclonedds`, `docker`, `audio`, `webrtc`, `firmware`, `pipecat`, `security`) using frontmatter `tags: [...]` — this page is tagged `cuda` only as a formatting example.
+Filename convention: `docs/log/short-kebab-case-title.md`. Tag entries with the relevant components from the tag list (`jetpack`, `cuda`, `cyclonedds`, `docker`, `audio`, `webrtc`, `firmware`, `pipecat`, `security`) using frontmatter `tags: [...]`.

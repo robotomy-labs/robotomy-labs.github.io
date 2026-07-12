@@ -3,11 +3,13 @@ title: System Overview
 sidebar_position: 1
 ---
 
+:::warning 🚧 Work in progress
+This page is a stub, not a finished reference. Parenthetical notes below (e.g. "_(confirm before publishing)_") mark unfilled placeholders, not documented facts — treat them as open TODOs until the JP6.2 rebuild solidifies and this notice is removed.
+:::
+
 :::note Living document
 This page is a reference, not a post. Edit it in place as the system changes — don't append dated addenda or leave stale sections describing a previous revision.
 :::
-
-Stub — fill in as the JP6.2 rebuild solidifies.
 
 ## Hardware
 
