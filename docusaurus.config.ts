@@ -28,6 +28,13 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css',
+      type: 'text/css',
+    },
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -44,6 +51,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/robotomy-labs/robotomy-labs.github.io/tree/main/',
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -69,7 +77,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Robotomy Labs',

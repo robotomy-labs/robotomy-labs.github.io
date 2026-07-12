@@ -1,30 +1,246 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Robotomy Labs theme: dark, flat, warm-bronze. The site runs in a single
+ * forced dark mode (see docusaurus.config.ts colorMode) — there is no light
+ * variant, so these variables are set on both :root and [data-theme='dark']
+ * to win the cascade regardless of Infima's own load order.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+:root,
+[data-theme='dark'] {
+  /* Core palette */
+  --ro-bg: #14120f;
+  --ro-bg-surface: #1c1912;
+  --ro-text-primary: #f2ede4;
+  --ro-text-secondary: #9a9488;
+  --ro-text-meta: #6e695f;
+  --ro-accent: #b08d57;
+  --ro-border: #302c25;
+
+  /* Infima base */
+  --ifm-background-color: var(--ro-bg);
+  --ifm-background-surface-color: var(--ro-bg-surface);
+  --ifm-font-color-base: var(--ro-text-primary);
+  --ifm-color-content: var(--ro-text-primary);
+  --ifm-color-content-secondary: var(--ro-text-secondary);
+  --ifm-heading-color: var(--ro-text-primary);
+  --ifm-hr-background-color: var(--ro-border);
+  --ifm-toc-border-color: var(--ro-border);
+  --ifm-table-border-color: var(--ro-border);
+  --ifm-color-emphasis-300: var(--ro-border);
+
+  /* Bronze accent, shaded for hover/active states */
+  --ifm-color-primary: #b08d57;
+  --ifm-color-primary-dark: #9c7a48;
+  --ifm-color-primary-darker: #937140;
+  --ifm-color-primary-darkest: #785c34;
+  --ifm-color-primary-light: #bb9c6c;
+  --ifm-color-primary-lighter: #c4a87e;
+  --ifm-color-primary-lightest: #d6c09e;
+
+  /* Code */
+  --ifm-code-font-size: 90%;
+  --ifm-pre-background: var(--ro-bg-surface);
+  --ifm-code-background: var(--ro-bg-surface);
+  --ifm-code-color: var(--ro-text-primary);
+  --docusaurus-highlighted-code-line-bg: rgba(176, 141, 87, 0.15);
+
+  /* Tag pill border var, exposed by the theme for exactly this purpose */
+  --docusaurus-tag-list-border: var(--ro-accent);
+
+  /* Flat everywhere: no shadows, no glows */
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+  --ifm-navbar-shadow: none;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* ---------- Typography ---------- */
+
+/* Monospace only for the top-level page title and the site title; body
+   copy and all lower heading levels stay on the sans-serif base font. */
+.markdown > header h1,
+.markdown > h1,
+.hero__title,
+.navbar__title {
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* ---------- Global flatness ---------- */
+
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  background-image: none;
+}
+
+/* ---------- Navbar / footer / sidebar ---------- */
+
+.navbar {
+  background-color: var(--ro-bg-surface);
+  border-bottom: 1px solid var(--ro-border);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--ro-bg);
+  border-top: 1px solid var(--ro-border);
+}
+
+.footer__link-item {
+  color: var(--ro-text-secondary);
+}
+
+.footer__link-item:hover {
+  color: var(--ro-accent);
+}
+
+.footer__copyright {
+  color: var(--ro-text-meta);
+}
+
+.menu__link--active,
+.menu__link:hover {
+  background-color: rgba(176, 141, 87, 0.1);
+}
+
+.menu__link--active {
+  color: var(--ro-accent);
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  border-radius: 4px;
+}
+
+.button--primary {
+  background-color: var(--ro-accent);
+  border-color: var(--ro-accent);
+  color: var(--ro-bg);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  color: var(--ro-bg);
+}
+
+.button--outline.button--secondary {
+  background-color: transparent;
+  border: 1px solid var(--ro-accent);
+  color: var(--ro-accent);
+}
+
+.button--outline.button--secondary:hover {
+  background-color: var(--ro-accent);
+  border-color: var(--ro-accent);
+  color: var(--ro-bg);
+}
+
+/* ---------- Cards (homepage feature blocks) ---------- */
+
+.ro-card {
+  border: 1px solid var(--ro-border);
+  border-radius: 6px;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  background-color: var(--ro-bg-surface);
+}
+
+.ro-card__icon {
+  font-size: 1.75rem;
+  color: var(--ro-accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.ro-card__title {
+  margin-bottom: 0.5rem;
+}
+
+.ro-card__description {
+  color: var(--ro-text-secondary);
+  margin-bottom: 0;
+}
+
+/* ---------- Tag pills ---------- */
+/* Tag/TagsListInline are CSS-modules (hashed class names), but Docusaurus's
+   webpack config keeps the source name as a literal substring
+   ([local]_[contenthash]), so a substring match is stable across builds. */
+
+a[class*='tagRegular'] {
+  background-color: rgba(176, 141, 87, 0.12);
+  color: var(--ro-accent);
+  border-color: var(--ro-accent);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  text-transform: lowercase;
+}
+
+a[class*='tagRegular']:hover {
+  background-color: var(--ro-accent);
+  color: var(--ro-bg);
+}
+
+/* ---------- Doc content section labels ---------- */
+/* Applies to h2 within any rendered markdown body (docs + blog) — this is
+   the "Symptom / Environment / Root Cause / Fix" level in log entries, and
+   the equivalent top-level sections in architecture docs. */
+
+.markdown h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ro-accent);
+  border-bottom: none;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Doc footer metadata row ---------- */
+
+.theme-doc-footer {
+  border-top: 1px solid var(--ro-border);
+  padding-top: 1rem;
+}
+
+.theme-doc-footer-edit-meta-row,
+.theme-edit-this-page,
+.theme-last-updated {
+  color: var(--ro-text-meta);
+  font-size: 0.8rem;
+  font-style: normal;
+}
+
+.theme-edit-this-page:hover {
+  color: var(--ro-accent);
+}
+
+/* Author-supplied optional metadata (e.g. Time Cost) inside a doc body.
+   Usage: <p className="ro-meta-row">Time cost: ~2h</p> */
+.ro-meta-row {
+  border-top: 1px solid var(--ro-border);
+  color: var(--ro-text-meta);
+  font-size: 0.8rem;
+  padding-top: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Code blocks ---------- */
+
+.theme-code-block {
+  border: 1px solid var(--ro-border);
+  border-radius: 6px;
+}
+
+:not(pre) > code {
+  border: 1px solid var(--ro-border);
+  padding: 0.15rem 0.4rem;
+}
+
+/* ---------- Admonitions: keep flat, no shadow (handled globally above) ---------- */
+
+.alert {
+  border-width: 1px;
 }

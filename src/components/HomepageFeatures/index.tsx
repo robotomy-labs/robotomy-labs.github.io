@@ -5,12 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
+  icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'The Log',
+    icon: 'ti-bug',
     description: (
       <>
         Pitfall-style entries from real development sessions. Every entry
@@ -21,6 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'The Architecture',
+    icon: 'ti-blueprint',
     description: (
       <>
         Living reference docs for the G1 EDU stack — CUDA, Jetson, DDS, the
@@ -31,6 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Built for the Stack',
+    icon: 'ti-cpu',
     description: (
       <>
         Written for engineers and serious hobbyists working with G1 EDU or
@@ -41,12 +45,15 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--4', styles.featureCol)}>
+      <div className="ro-card">
+        <i className={clsx('ti', icon, 'ro-card__icon')} aria-hidden="true" />
+        <Heading as="h3" className="ro-card__title">
+          {title}
+        </Heading>
+        <p className="ro-card__description">{description}</p>
       </div>
     </div>
   );

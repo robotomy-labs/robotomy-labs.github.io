@@ -1,7 +1,7 @@
 ---
 title: Writing a Log Entry
 sidebar_position: 1
-tags: []
+tags: [cuda]
 ---
 
 This page documents the format for everything else in `docs/log/`. It isn't a real pitfall — it's the template. Delete this note once the format is familiar, or leave it as a reference for future entries.
@@ -26,8 +26,14 @@ The exact steps, commands, or config change that resolved it. Reproducible enoug
 
 ## Time Cost (optional)
 
-Roughly how long this cost to diagnose — useful signal for how nasty a pitfall is.
+Roughly how long this cost to diagnose — useful signal for how nasty a pitfall is. Put it in a meta row at the very end of the entry, not as a regular section:
+
+```mdx
+<p className="ro-meta-row">Time cost: ~2h</p>
+```
+
+That renders as a small, dim, top-bordered line — visually distinct from the four main sections above, and consistent with the "last updated" row Docusaurus adds automatically below it.
 
 ---
 
-Filename convention: `docs/log/short-kebab-case-title.md`. Tag entries with the relevant components from the tag list (`jetpack`, `cuda`, `cyclonedds`, `docker`, `audio`, `webrtc`, `firmware`, `pipecat`, `security`) using frontmatter `tags: [...]`.
+Filename convention: `docs/log/short-kebab-case-title.md`. Tag entries with the relevant components from the tag list (`jetpack`, `cuda`, `cyclonedds`, `docker`, `audio`, `webrtc`, `firmware`, `pipecat`, `security`) using frontmatter `tags: [...]` — this page is tagged `cuda` only as a formatting example.
