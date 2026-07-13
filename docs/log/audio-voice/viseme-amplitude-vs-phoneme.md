@@ -30,6 +30,10 @@ Chosen deliberately, not as a fallback. The reasoning:
 
 **It's explicitly parked, not rejected.** Phoneme-based sync remains a known, scoped option for later — the decision wasn't "amplitude forever," it was "amplitude now, revisit if and when visual quality demands it."
 
+:::note Status update
+The amplitude-based approach above was the initial pygame-prototype implementation. Since this decision was made, the project has moved toward the alignment-based approach described as "parked" — see [the ElevenLabs viseme timing entry](/docs/log/audio-voice/elevenlabs-viseme-timing) for the actual implementation. Left this entry as-is rather than rewriting it, since the reasoning above is exactly why that later move made sense once ElevenLabs' alignment data made it a low-cost upgrade rather than a from-scratch build.
+:::
+
 ## The general pattern here
 
 This is a recurring shape in this project's decisions: **default to the option that has the fewest hard dependencies on other not-yet-finalized decisions**, even when a more sophisticated option exists, and treat the sophisticated option as a scoped future upgrade rather than something to build in from day one. The CUDA-backend decision (containerize rather than hand-compile) and this viseme decision both follow that same shape, even though the underlying technical domains are completely different.
