@@ -1,6 +1,8 @@
 ---
 title: Custom gestures return success but never move
 tags: [cyclonedds, firmware]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

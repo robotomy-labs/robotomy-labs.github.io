@@ -1,0 +1,9 @@
+{
+  "label": "Audio & Voice",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log/audio-voice",
+    "description": "Mic gain, onboard speaker playback, Pipecat STT plumbing, and viseme sync — the audio path end to end."
+  }
+}

@@ -1,6 +1,8 @@
 ---
 title: "A dead DNS entry inside a prebuilt container, and why the fix isn't 'just repoint everything'"
 tags: [docker, jetpack]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

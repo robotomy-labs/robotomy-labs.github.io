@@ -1,0 +1,9 @@
+{
+  "label": "WebRTC & Gestures",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log/webrtc-gestures",
+    "description": "WebRTC connection behavior across firmware versions, and gesture dispatch — FSM gating, arbitration, and everything in between the LLM's output and the robot's arms."
+  }
+}

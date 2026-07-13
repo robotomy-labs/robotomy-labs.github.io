@@ -1,6 +1,8 @@
 ---
 title: "Why the safety abort doesn't route through the pipeline it might need to interrupt"
 tags: [pipecat, security]
+sidebar_custom_props:
+  entry_type: decision
 ---
 
 Another decision-rationale entry, not a pitfall. This one's about a safety design choice made deliberately, before anything went wrong — worth documenting because the reasoning generalizes to any voice-pipeline project with a real-world safety surface, not just this one.

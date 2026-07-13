@@ -47,6 +47,13 @@
   /* Tag pill border var, exposed by the theme for exactly this purpose */
   --docusaurus-tag-list-border: var(--ro-accent);
 
+  /* Entry-type badges: Pitfall reuses the bronze accent (it's the default,
+     majority case); Decision and Planned get their own muted, distinct hues
+     so all three read apart at a glance in the card grid. */
+  --ro-badge-pitfall: var(--ro-accent);
+  --ro-badge-decision: #6f9bb0;
+  --ro-badge-planned: #a07bc4;
+
   /* Flat everywhere: no shadows, no glows */
   --ifm-global-shadow-lw: none;
   --ifm-global-shadow-md: none;
@@ -243,4 +250,66 @@ a[class*='tagRegular']:hover {
 
 .alert {
   border-width: 1px;
+}
+
+/* ---------- Entry-type badges (Pitfall / Decision / Planned) ---------- */
+/* Rendered via src/theme/DocCard (card grid) and src/theme/DocItem/Content
+   (individual entry page), both wrapping the default theme component and
+   reading the `sidebar_custom_props.entry_type` frontmatter field. */
+
+.ro-entry-badge {
+  display: inline-block;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid;
+  pointer-events: none;
+}
+
+.ro-entry-badge--pitfall {
+  color: var(--ro-badge-pitfall);
+  border-color: var(--ro-badge-pitfall);
+  background-color: rgba(176, 141, 87, 0.12);
+}
+
+.ro-entry-badge--decision {
+  color: var(--ro-badge-decision);
+  border-color: var(--ro-badge-decision);
+  background-color: rgba(111, 155, 176, 0.12);
+}
+
+.ro-entry-badge--planned {
+  color: var(--ro-badge-planned);
+  border-color: var(--ro-badge-planned);
+  background-color: rgba(160, 123, 196, 0.12);
+}
+
+/* Card variant: overlaid in the corner of the DocCard grid tile. The
+   wrapper below restores the equal-height grid behavior that Docusaurus's
+   own DocCardList stylesheet applies one level shallower than our wrapper
+   div now sits. */
+.ro-doc-card-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.ro-doc-card-wrapper > .card {
+  height: 100%;
+}
+
+.ro-entry-badge--card {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+}
+
+/* Page variant: sits just above the synthetic H1 in DocItem/Content. */
+.ro-entry-badge--page {
+  margin-bottom: 0.75rem;
 }

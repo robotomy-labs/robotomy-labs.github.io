@@ -1,6 +1,8 @@
 ---
 title: "Amplitude-based lip sync over phoneme-based — a scope decision, not a quality one"
 tags: [audio]
+sidebar_custom_props:
+  entry_type: decision
 ---
 
 ## The situation

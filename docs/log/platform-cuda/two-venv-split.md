@@ -1,6 +1,8 @@
 ---
 title: "Two Python venvs, two different silent-failure modes"
 tags: [jetpack]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom
@@ -25,7 +27,7 @@ Running an SDK script from the voice-pipeline venv — or vice versa — doesn't
 
 ## Fix
 
-No real fix beyond discipline and a checked habit, given the platform constraint at the time — the two venvs genuinely couldn't be unified until the JetPack 6.2 migration removed the Python 3.8 ceiling entirely (see the [JP6.2 reflash log entry](/docs/log)). The practical mitigation:
+No real fix beyond discipline and a checked habit, given the platform constraint at the time — the two venvs genuinely couldn't be unified until the JetPack 6.2 migration removed the Python 3.8 ceiling entirely (see the [JP6.2 reflash log entry](/docs/log/platform-cuda/jp62-reflash)). The practical mitigation:
 
 ```bash
 # ALWAYS check which venv is active before running ANY script

@@ -1,6 +1,8 @@
 ---
 title: "Containerize the wheel, don't fight it — a decision, not a fix"
 tags: [docker, cuda, jetpack]
+sidebar_custom_props:
+  entry_type: decision
 ---
 
 Most entries on this site follow Symptom → Root Cause → Fix, because most problems here are genuinely that shape: something broke, here's why, here's the exact command. This one isn't that. Nothing was broken. This is a record of a decision made *before* anything broke — the kind of judgment call that doesn't show up in a bug report, but shapes everything downstream of it.

@@ -1,6 +1,8 @@
 ---
 title: "Pipecat's SegmentedSTTService silently double-wraps audio unless you override one flag"
 tags: [pipecat, audio]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

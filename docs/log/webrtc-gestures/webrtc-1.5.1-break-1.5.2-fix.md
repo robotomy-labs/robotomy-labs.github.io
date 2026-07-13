@@ -1,6 +1,8 @@
 ---
 title: "Firmware 1.5.1 broke external WebRTC — here's the full arc"
 tags: [webrtc, firmware]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

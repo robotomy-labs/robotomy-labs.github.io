@@ -1,6 +1,8 @@
 ---
 title: "AudioClient.PlayStream() will reject audio that looks fine but isn't"
 tags: [audio, firmware]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

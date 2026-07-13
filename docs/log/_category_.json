@@ -4,6 +4,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/log",
-    "description": "Pitfall-style entries from real G1 EDU development. Each entry follows: Symptom, Environment, Root Cause, Fix. Adding one? See \"Contributing a Log Entry\" in the sidebar for the format."
+    "description": "Real-world entries from G1 EDU development — confirmed pitfalls (Symptom/Root Cause/Fix), architecture decisions reasoned through before or after building, and planned designs not yet implemented. Type is marked on each entry. Adding one? See \"Contributing a Log Entry\" in the sidebar for the format."
   }
 }

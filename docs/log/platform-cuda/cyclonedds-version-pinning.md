@@ -1,6 +1,8 @@
 ---
 title: "CycloneDDS version pinning will silently wreck your build"
 tags: [cyclonedds, jetpack]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

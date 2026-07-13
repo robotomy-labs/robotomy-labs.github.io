@@ -1,6 +1,8 @@
 ---
 title: "Mic gain is two independent settings, not one"
 tags: [audio, jetpack]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

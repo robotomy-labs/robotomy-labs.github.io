@@ -1,0 +1,9 @@
+{
+  "label": "Safety & Reliability",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log/safety-reliability",
+    "description": "Safety-tier design and reliability post-mortems — how the system fails safe, and what got misdiagnosed before it did."
+  }
+}

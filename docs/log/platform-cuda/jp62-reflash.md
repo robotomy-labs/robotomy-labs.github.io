@@ -1,6 +1,8 @@
 ---
 title: "Flashing the G1's Orin NX from JetPack 5.1.1 to 6.2"
 tags: [jetpack, cuda, hardware]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

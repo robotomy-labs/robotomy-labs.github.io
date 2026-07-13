@@ -1,6 +1,8 @@
 ---
 title: "Planned: the gesture arbitrator will drop conflicting commands instead of queueing them"
 tags: [pipecat]
+sidebar_custom_props:
+  entry_type: planned
 ---
 
 :::note Not yet built
@@ -31,7 +33,7 @@ An earlier, more permissive plan considered a small buffer — queue a couple of
 
 **Dropping is a safe, well-defined failure mode. Queueing introduces new failure modes that all need separate answers.** How deep can the queue grow? What happens if a safety abort fires mid-queue? Does a stale queued gesture ever get silently dropped anyway once it's old enough to be irrelevant? A strict drop-lock makes all of those questions moot, because the situations they describe can't occur in the first place.
 
-**It composes cleanly with the safety design already decided.** The [two-tier SAFE_IDLE system](/docs/log/safe-idle-two-tier-safety) establishes that safety-relevant state should stay simple and independently verifiable. A strict lock with no queue is trivially easy to confirm has no hidden pending motion state — a queue is one more thing that would need separate verification during any safety review.
+**It composes cleanly with the safety design already decided.** The [two-tier SAFE_IDLE system](/docs/log/safety-reliability/safe-idle-two-tier-safety) establishes that safety-relevant state should stay simple and independently verifiable. A strict lock with no queue is trivially easy to confirm has no hidden pending motion state — a queue is one more thing that would need separate verification during any safety review.
 
 ## The tradeoff, honestly
 

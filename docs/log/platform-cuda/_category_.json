@@ -1,0 +1,9 @@
+{
+  "label": "Platform & CUDA",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log/platform-cuda",
+    "description": "JetPack, CUDA, DDS, and container-toolchain entries — flashing, version pins, and the platform ceiling that drove the JP6.2 rebuild."
+  }
+}

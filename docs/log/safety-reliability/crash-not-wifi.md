@@ -1,6 +1,8 @@
 ---
 title: "The demo didn't fail because of WiFi — it crashed"
 tags: [pipecat]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom

@@ -1,6 +1,8 @@
 ---
 title: "The Jetson's clock resets to 1970 on every reboot"
 tags: [jetpack]
+sidebar_custom_props:
+  entry_type: pitfall
 ---
 
 ## Symptom
