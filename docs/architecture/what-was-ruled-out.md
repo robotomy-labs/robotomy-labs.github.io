@@ -14,6 +14,9 @@ Each row below is an approach that looked reasonable on paper, got tried on a re
 | **WebRTC mic audio receive** | Returns zero frames on G1 firmware 1.4.5. This path is reported to work on Go2 Pro/EDU, but does not work on G1. |
 | **Direct ALSA mic access** | The internal mic sits behind an APE XBAR crossbar owned exclusively by a vendor service — not accessible from user-space, regardless of permissions. |
 | **Piper (local TTS)** | CPU spikes to 99% under demo load, which introduces DDS instability risk on a platform where DDS is also carrying motion control traffic. Not worth the risk even though it's otherwise a capable engine. |
+| **Kokoro (local TTS)** | Required `onnxruntime` version not available for ARM64 on JetPack 5.1.1 — blocked at the dependency level before the engine itself could be evaluated. |
+| **Coqui XTTS v2 (local TTS)** | Dependency hell: conflicting `numpy`, `numba`, `trainer`, and `pandas` version requirements couldn't be reconciled into a working ARM64 environment. |
+| **Piper (local TTS) — packaging** | No ARM64 wheel available for `piper-phonemize` on JetPack 5.1.1; installation blocked before the engine could run at all. (Distinct from the CPU-spike issue in the Piper row above, hit later once a workaround unblocked installation.) |
 | **eGPU for LLM inference** | The available eGPU is AMD RDNA3; the platform runs ARM Ubuntu 20.04. No ROCm support on that combination — dead end at the driver level, not a performance issue. |
 | **Direct DDS call to `api_id 7112`** | Returns `7403`. This is a private endpoint not accessible via the public DDS interface, regardless of payload correctness. |
 | **Bluetooth as a gesture trigger** | No confirmed working implementation exists for this on the G1's Jetson companion computer. A WiFi hotspot is the correct transport for this use case instead. |
