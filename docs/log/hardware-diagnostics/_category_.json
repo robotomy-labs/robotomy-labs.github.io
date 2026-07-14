@@ -1,0 +1,9 @@
+{
+  "label": "Hardware Diagnostics",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/log/hardware-diagnostics",
+    "description": "Physical hardware fault diagnosis on the G1 platform — non-invasive isolation methodology, telemetry-based fault signatures, and deciding escalation criteria before you're under pressure."
+  }
+}
