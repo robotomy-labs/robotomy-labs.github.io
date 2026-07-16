@@ -6,6 +6,8 @@ tags: [webrtc, firmware]
 
 On April 11, 2026, the first real demo of Project Ziko ran at an open house — voice pipeline working end to end, wake word firing reliably, built-in gestures dispatched live by GPT-4o through a WebRTC connection to the robot. It was a full success. Six days later, the robot was non-operational, and it would take weeks, a community investigation, and eventually a full architectural pivot away from WebRTC before gesture control was genuinely solid again. This is that arc.
 
+Scoping note: the WebRTC break was the most visible failure to come out of firmware 1.5.1, but it wasn't the only one. The same update also killed the internal speaker, introduced new motor alarms, and surfaced a separate (unrelated) custom-gesture failure — four compounding problems off one release, not one. This post follows the WebRTC thread specifically; the full triage across all four is in [the 1.5.1 systemic-regression entry](/docs/log/hardware-diagnostics/1.5.1-systemic-regression).
+
 {/* truncate */}
 
 ## What was actually working on April 11
